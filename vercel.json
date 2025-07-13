@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "name": "agri-connect-frontend",
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/build/index.html"
+    }
+  ],
+  "env": {
+    "NODE_OPTIONS": "--openssl-legacy-provider",
+    "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
+  }
+}

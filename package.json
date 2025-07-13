@@ -1,0 +1,18 @@
+{
+  "name": "agri-connect-root",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd client && npm install --legacy-peer-deps && NODE_OPTIONS=--openssl-legacy-provider npm run build",
+    "start": "cd client && npm start"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/speech": "^7.0.1",
+    "axios": "^1.8.4",
+    "font-awesome": "^4.7.0",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^15.6.1"
+  }
+}
